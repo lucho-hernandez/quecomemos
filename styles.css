@@ -1,7 +1,65 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* --------- End of animations -------- */
+
+.fas {
+  font-size: 3em;
+  color: #e5e5e5;
+
+}
 p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  justify-content: center;
   color: black;
+  font-size: 45px;
+  line-height: 1;
 }
 
 img {
@@ -13,6 +71,7 @@ img {
   margin-right: auto;
 }
 #image {
+  width: 100%;
   height: 100%;
 }
 
@@ -25,23 +84,28 @@ img {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #e5e5e5;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: -35px;
+}
+
 #food {
-  color: rgb(30, 30, 30);
-  text-align: center;
+  display: flex;
   
 }
-#buttons {
-  position: absolute;
-  top: 80%;
-  left: 25%;
-  transform: translate(-80%,1);
-  box-align: center;
-}
-#foodname {
+
+.foodname {
+  display: flex;
+  margin-top: 0%;
   color: rgb(30, 30, 30);
-  font-family: 'Roboto-700', sans-serif;
-  font-size: 150%;
-  text-align: left;
+  font-size: 250%;
+  
 }
 
 /* Split the screen in half */
@@ -52,55 +116,132 @@ img {
   z-index: 0;
   top: 0;
   overflow-x: hidden;
-  padding-top: 0px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Control the left side */
 .left {
   left: 0;
   background-color: white;
+  flex-direction: column;
+  max-width: 50%;
+  margin-left: 5%;
+  margin-top: 2%; 
 }
 
 /* Control the right side */
 .right {
+  animation: fadeIn 2.5s;
   right: 0;
-  background-color: rgb(189, 189, 189);
+  background-color: white;
 
 }
 
-/* If you want the content centered horizontally and vertically */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
+.buttons {
+  animation: fadeInUp 1s;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 9px;
+  margin-bottom: 15%;
+  
 }
 
-/* Style the image inside the centered container, if needed */
-.centered img {
-  width: 150px;
-  border-radius: 50%;
+#search-button {
+  color: white;
+  background: #7dddd7;
+  border-color: transparent;
 }
 
-.button {
-  position: relative;
-  top: 0%;
-  left: 0%;
-  background-color: transparent; /* Green */
+#search-button:hover {
+  transition:.3s;
+  color: black;
+  background: #9ef3ed;
+}
+
+#refresh {
+  color: white;
+  background: #fa7156;
+  border-color: transparent;
+}
+
+#refresh:hover {
+  transition:.3s;
+  color: black;
+  background: #ffa997;
+}
+
+.info-buttons {
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 40px; 
+}
+
+hr {
+  margin-left: -5px; 
+  width: 270px;
+  border-color: rgb(230, 230, 230); 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-width: 0.5px;
+}
+
+.delivery {
+  animation: fadeInUp 1.5s;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  /* background: #e5e5e5; */
+  background-color: white;
+}
+.delivery h2 {
+  margin-top: 0px;
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: -20px; 
+  padding-bottom: 2px; 
+}
+.delivery h3 {
+  font-size: 17px;
+  font-weight: 700;
+  padding-bottom: 0px; 
+  margin-bottom: 15px;
+}
+
+.button-delivery {
+  background-color: transparent;
   border-style: solid;
   border-width: thin;
-  border-color: #222886;
-  color: #222886;
-  padding: 10px 32px;
+  border-color: black;
+  color: black;
+  padding: 3px;
+  padding-left: 24px;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  border-radius: 40px;
+  width: 100px;
+  font-size: 14px;
+} 
+
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
   font-family: 'Roboto-400', sans-serif;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  border-radius: 30px;
+  border-radius: 50%;
   font-size: 15px;
 }
-.button:hover {
+
+.button-delivery:hover {
+  transition: .3s;
+  border-color: transparent;
   background-color: #222886; /* Green */
   color: white;
 }
@@ -113,4 +254,5 @@ img {
   width: 100%;
   height: 100%;
   background: white;
+  
 }
