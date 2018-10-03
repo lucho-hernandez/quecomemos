@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+p {
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#image {
+  height: 100%;
+}
+
+#gifloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#food {
+  color: rgb(30, 30, 30);
+  text-align: center;
+  
+}
+#buttons {
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  transform: translate(-80%,1);
+  box-align: center;
+}
+#foodname {
+  color: rgb(30, 30, 30);
+  font-family: 'Roboto-700', sans-serif;
+  font-size: 150%;
+  text-align: left;
+}
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: white;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: rgb(189, 189, 189);
+
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.button {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  background-color: transparent; /* Green */
+  border-style: solid;
+  border-width: thin;
+  border-color: #222886;
+  color: #222886;
+  padding: 10px 32px;
+  font-family: 'Roboto-400', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 15px;
+}
+.button:hover {
+  background-color: #222886; /* Green */
+  color: white;
+}
+
+#loader {
+  position: fixed;
+  left: 0;
+  top: 0%;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: white;
+}

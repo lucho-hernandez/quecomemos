@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800" rel="stylesheet">
+    <meta charset=utf-8 />
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <title>Que comemos hoy?</title>
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <img id="gifloader" src="https://cdn.dribbble.com/users/645440/screenshots/3266490/loader-2_food.gif" alt="">
+    </div>
+
+   
+    <div class="flex-container">
+        
+        <div class="split left">
+            <i class="fas fa-utensils"></i>
+            <h1 class="title">¿Qué comemos?</h1>
+            <div class="foodname">
+                    <p id="food"></p>
+            </div>
+            <div class="buttons">
+                <span>
+                    <a href="#" class="button 1" id="search-button" target="_blank"><ion-icon name="checkmark"></ion-icon></a>
+                </span> <h2 class="info-buttons">¡A cocinar!</h2>
+                <span>
+                    <a href="javascript:history.go(0)" class="button 2" id="refresh"><ion-icon name="sync"></ion-icon></a>
+                </span> <h2 class="info-buttons">¿Que más hay?</h2>
+                
+            </div>
+                    <div class="delivery">
+                            <hr>
+                            <h2 class="delivery-title 1">No tengo ganas de cocinar</h2>
+                            <h3 class="delivery-title 2">¿Y si lo pedimos?</h3>
+                            <a href="#" class="button-delivery" id="order-button" target="_blank"><ion-icon name="bicycle"></ion-icon>&nbsp;Delivery</a>
+                    </div>
+        </div>
+           
+    </div>
+
+    <div class="split right">
+        <div class="centered"></div>
+            <div id="image">
+                <img id="image-food" src="" />
+            </div></div>  
+        </div>
+    </div>
+</body>
+
+<script src="food.js"></script>
+
+</html>
