@@ -24,6 +24,10 @@ var populateData = function(data) {
   imageElement.src = randomQuote.img;
   buttonElement.href = "https://www.google.com/search?q=Receta+de+"+randomQuote.text;
   buttonOrder.href = "https://www.pedidosya.com.ar/restaurantes/cordoba?&v="+randomQuote.text;
+  
+        imageElement.onload = function() {
+        document.getElementById("loader").style.display = "none";
+    }
   }
   
 })();
