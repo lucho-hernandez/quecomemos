@@ -6,7 +6,6 @@
   })
   .then(function(myJson) {
     populateData(myJson.rows)
-    document.getElementById("loader").style.display = "none";;
   });
   
 var populateData = function(data) {
