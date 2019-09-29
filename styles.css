@@ -266,7 +266,7 @@ hr {
 
 /* ---------------- Mobile ------------------ */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   .split {
     display: flex;
     flex-direction: column;
@@ -276,11 +276,12 @@ hr {
   /* Control the left side */
   .left {
     position: fixed;
-    width: 1000px;
-    height: 1000px;
-    padding-right: 300px;
-    margin-left: 35px;
-    margin-top: 30px;
+    /* width: 1000px; */
+    /* height: 1000px; */
+    /* padding-right: 280px; */
+    margin-left: 455px;
+    margin-top: 400px;
+    transform: scale(2.5);
   }
 
   /* Control the right side */
@@ -308,8 +309,13 @@ hr {
     color: #666666;
     width: 450px;
   }
+
+  #food {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+  }
   .fas {
-    margin-bottom: 10px;
     font-size: 2em;
     color: #acacac;
   }
