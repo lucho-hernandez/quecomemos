@@ -1,58 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800" rel="stylesheet">
-    <meta charset=utf-8 />
-    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700,800"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="./images/favicon.png" />
     <title>Que comemos hoy?</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="loader" id="loader">
-        <img id="gifloader" src="./images/loader.gif" alt="">
+      <img id="gifloader" src="./images/loader.gif" alt="" />
     </div>
-
-   
-    <div class="flex-container">
-        
+    <div class="desktop">
+      <div class="flex-container">
         <div class="split left">
-            <i class="fas fa-utensils"></i>
-            <h1 class="title">¿Qué comemos?</h1>
-            <div class="foodname">
-                    <p id="food"></p>
-            </div>
-            <div class="buttons">
-                <span>
-                    <a href="#" id="search-button" target="_blank"><h2 class="info-buttons-a">¡Quiero la receta!</h2></a>
-                </span> 
-                <!-- <h2 class="info-buttons">¡Quiero la receta!</h2> -->
-                <span>
-                    <a href="javascript:history.go(0)" id="refresh"><h2 class="info-buttons-b">Otra opción</h2></a>
-                </span>
-                <!-- <h2 class="info-buttons">Otra opción</h2> -->
-                
-            </div>
-                    <div class="delivery">
-                            <h2 class="delivery-title 1">No tengo ganas de cocinar</h2>
-                            <h3 class="delivery-title 2">¿Y si lo pedimos?</h3>
-                            <a href="#" class="button-delivery" id="order-button" target="_blank"><ion-icon name="bicycle"></ion-icon>&nbsp;Delivery</a>
-                    </div>
+          <i class="fas fa-utensils"></i>
+          <h1 class="title">¿Qué comemos?</h1>
+          <div class="foodname">
+            <p id="food"></p>
+          </div>
+          <div class="buttons">
+            <span>
+              <a href="#" id="search-button" target="_blank"
+                ><h2 class="info-buttons-a">¡Quiero la receta!</h2></a
+              >
+            </span>
+            <span>
+              <a href="javascript:history.go(0)" id="refresh"
+                ><h2 class="info-buttons-b">Otra opción</h2></a
+              >
+            </span>
+          </div>
+          <div class="delivery">
+            <h2 class="delivery-title 1">No tengo ganas de cocinar</h2>
+            <h3 class="delivery-title 2">¿Y si lo pedimos?</h3>
+            <a
+              href="#"
+              class="button-delivery"
+              id="order-button"
+              target="_blank"
+              ><ion-icon name="bicycle"></ion-icon>&nbsp;Delivery</a
+            >
+          </div>
         </div>
-           
-    </div>
+      </div>
 
-    <div class="split right">
+      <div class="split right">
         <div class="centered"></div>
-            <div id="image">
-                <img id="image-food" src="" />
-            </div></div>  
+        <div id="image">
+          <img id="image-food" src="" />
         </div>
+      </div>
     </div>
-</body>
 
-<script src="food.js"></script>
+    <div class="mobile">
+      <div class="img-mobile">
+        <img id="image-mobile" src="" />
+      </div>
+      <div class="card">
+        <div class="icon-mobile">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <div class="title-mobile">
+          <h1 class="title">¿Qué comemos?</h1>
+        </div>
+        <div class="foodname">
+          <p id="food-mobile"></p>
+        </div>
+        <div class="buttons-mobile">
+          <div class="receta-mobile">
+            <a href="#" id="search-button-mobile" target="_blank"
+              ><h2 class="info-buttons-a">¡Quiero la receta!</h2></a
+            >
+          </div>
+          <div class="refresh-mobile">
+            <a href="javascript:history.go(0)" id="refresh"
+              ><h2 class="info-buttons-b">Otra opción</h2></a
+            >
+          </div>
+        </div>
+        <div class="delivery-mobile">
+          <div class="hint-mobile">
+            <h3 class="delivery-title 2">¿Y si lo pedimos?</h3>
+          </div>
+          <div class="delivery-mobile">
+            <a
+              href="#"
+              class="button-delivery"
+              id="order-button-mobile"
+              target="_blank"
+              ><ion-icon name="bicycle"></ion-icon>&nbsp;Delivery</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 
+  <script src="food.js"></script>
 </html>
