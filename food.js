@@ -1,9 +1,10 @@
 (function() {
   var quotes;
   fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('http://gsx2json.com/api?id=1FItBw1ljvC1K09yK-Tmu5_hV0g7hI_XKCBN_ve5m3Sg&sheet=1&columns=false')}`)
-    .then(function(response) {
-      return response.json();
-    })
+                    .then(response => {
+                      if (response.ok) return response.json()
+                      throw new Error('Network response was not ok.')
+                    })
     .then(function(myJson) {
       populateData(myJson.rows);
     });
