@@ -7,7 +7,7 @@
       return response.json();
     })
     .then(function(myJson) {
-      populateData(myJson.rows);
+      populateData(myJson);
     });
 
   var populateData = function(data) {
